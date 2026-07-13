@@ -18,9 +18,10 @@ const currentPath = route.path
 <template>
   <div class="min-h-screen relative">
     <img 
-      src="@/assets/2FFE719FFBEE0B741F111AFE8590520C.png" 
+      src="@/assets/2FFE719FFBEE0B741F111AFE8590520C.webp" 
       alt="背景"
       class="absolute inset-0 w-full h-full object-cover object-top"
+      loading="lazy"
     />
     <div class="absolute inset-0 bg-black/10"></div>
     <div class="relative z-10 flex flex-col items-center justify-center min-h-screen">
