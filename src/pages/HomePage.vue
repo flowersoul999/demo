@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
+const route = useRoute()
 
 const navItems = [
   { name: '首页', path: '/' },
@@ -11,7 +12,7 @@ const navItems = [
   { name: '山海传音', path: '/voice' },
 ]
 
-const currentPath = ''
+const currentPath = route.path
 </script>
 
 <template>
@@ -29,7 +30,7 @@ const currentPath = ''
           :key="item.path"
           @click="router.push(item.path)"
           class="px-8 py-2 rounded-full text-blue-600 font-bold text-lg transition-all duration-300 hover:bg-green-200"
-          :class="{ 'text-green-600 font-extrabold': item.path === '/' }"
+          :class="{ 'text-green-600 font-extrabold': item.path === currentPath }"
         >
           {{ item.name }}
         </button>
